@@ -3,17 +3,31 @@
 
 <head>
     <title>AJAX Test</title>
+    <script	src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script src="event.js"></script>
+    
 </head>
 
 <body>
-    <!--<button onclick="writeToDocument('https://swapi.co/api/people')">People</button>-->
-    <button onclick="writeToDocument('https://api.worldoftanks.eu/wot/account/list/?application_id=5d6d1657c5bc736658f1e6aa3dcb5f6e&search=loef78')">People</button>
-    <button onclick="writeToDocument('https://swapi.co/api/planets')">Planets</button>
-    <button onclick="writeToDocument('https://swapi.co/api/species')">Species</button>
-    <button onclick="writeToDocument('https://swapi.co/api/starships')">Starship</button>
-    <button onclick="writeToDocument('https://swapi.co/api/vehicles')">Vehicles</button>
-    <button onclick="writeToDocument('https://swapi.co/api/films')">Films</button>
+    <form onsubmit="writeToDocument();return false">
+        <div>
+            <label for="uname">Username: </label>
+            <input type="text" id="uname" name="name">
+        </div>
+        <div>
+            <button id="Submit-btn">Submit</button>
+        </div>
+    </form>
+     
+    <div id="NickName"></div>
+    <div id="Account_ID"></div>
+    
+    <div id="battles"></div>
+    <div id="draws"></div>
+    <div id="wins"></div>
+    <div id="losses"></div>
+    <div id="winrate"></div>
     <div id="data"></div>
 </body>
 
